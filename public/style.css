@@ -1,3 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* width: 1366px; */
+    width: 100vw;
+    /* height: 768px; */
+    height: 100vh;
+    background-color: hsl(0, 0%, 95%);
+    display: flex;
+}
+
+div {
+    border: 1px solid;
+}
+
+.box_container {
+    margin: auto;
+    width: 1000px;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid; */
+}
+
+
+/* 
+.content { 
+    border: 1px solid;
+    width: 800px;
+    height: 300px;
+    display: flex;
+} */
+
+.box_sedans, .box_suvs, .box_luxury {
+    /* border: 1px solid; */
+    width: 250px;
+    height: 400px;
+}
+
+
+
+
+
 
 /*
 # Front-end Style Guide
