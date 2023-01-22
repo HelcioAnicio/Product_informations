@@ -9,10 +9,9 @@ body {
     display: flex;
 }
 
-div {
-    border: 1px solid;
-}
 
+
+/* MAIN WITH CONTENT */
 .box_container {
     margin: auto;
     width: 1000px;
@@ -20,23 +19,76 @@ div {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid; */
 }
 
 
-/* 
-.content { 
-    border: 1px solid;
-    width: 800px;
-    height: 300px;
-    display: flex;
-} */
 
+/* BOXS WITH CONTENT */
 .box_sedans, .box_suvs, .box_luxury {
-    /* border: 1px solid; */
-    width: 250px;
-    height: 400px;
+    width: 200px;
+    height: 380px;
+    box-sizing: content-box;
+    padding: 30px 35px;
 }
+
+.box_sedans {
+    border-radius: 7px 0 0 7px;
+    background-color: hsl(31, 77%, 52%);
+}
+
+.box_suvs {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.box_luxury {
+    border-radius: 0 7px 7px 0;
+    background-color: hsl(179, 100%, 13%);
+}
+
+
+
+/* DIVS WITH TEXT */
+.box_texts {
+    height: 250px;
+}
+
+h1 {
+    font: 700 35px 'Big Shoulders Display', cursive;
+    color: hsl(0, 0%, 95%);
+}
+
+.box_texts > p {
+    color: hsla(0, 0%, 100%, 0.75);
+    font: 400 13px 'Lexend Deca', sans-serif;
+    width: 190px;
+    line-height: 20px;
+}
+
+
+/* BOX WITH BUTTON */
+.box_button > button {
+    border: none;
+    border-radius: 50px;
+    width: 130px;
+    font: 400 13px 'Lexend Deca', sans-serif;;
+    background-color: hsl(0, 0%, 95%);
+}
+
+.box_sedans > .box_button  p {
+    color:  hsl(31, 77%, 52%);
+}
+
+.box_suvs > .box_button  p {
+    color:  hsl(184, 100%, 22%);
+}
+
+.box_luxury > .box_button  p {
+    color: hsl(179, 100%, 13%);    
+}
+
+
+
+
 
 
 
@@ -73,6 +125,10 @@ Very light gray (background, headings, buttons): hsl(0, 0%, 95%)
 - Font size: 15px
 
 ### Font
+
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif;
+
 
 - Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
 - Weights: 400
