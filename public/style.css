@@ -7,15 +7,21 @@ body {
     height: 100vh;
     background-color: hsl(0, 0%, 95%);
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
 
 /* MAIN WITH CONTENT */
 .box_container {
-    margin: auto;
-    width: 1000px;
-    height: 550px;
+    /* width: 1000px; */
+    min-width: 990px;
+    width: 73%;
+    max-width: 1000px;
+    /* height: 450px; */
+    height: 59%;
+    max-height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,9 +31,11 @@ body {
 
 /* BOXS WITH CONTENT */
 .box_sedans, .box_suvs, .box_luxury {
-    width: 200px;
-    height: 380px;
-    box-sizing: content-box;
+    min-width: 270px;
+    width: 27%;
+    min-height: 390px;
+    height: 100%;
+    box-sizing: border-box;
     padding: 30px 35px;
 }
 
@@ -49,10 +57,13 @@ body {
 
 /* DIVS WITH TEXT */
 .box_texts {
-    height: 250px;
+    /* height: 200px; */
+    height: 53%;
 }
 
 h1 {
+    /* width: 100px; */
+    width: 50%;
     font: 700 35px 'Big Shoulders Display', cursive;
     color: hsl(0, 0%, 95%);
 }
@@ -60,35 +71,77 @@ h1 {
 .box_texts > p {
     color: hsla(0, 0%, 100%, 0.75);
     font: 400 13px 'Lexend Deca', sans-serif;
-    width: 190px;
+    /* width: 190px; */
+    width: 95%;
     line-height: 20px;
 }
 
 
 /* BOX WITH BUTTON */
-.box_button > button {
+.box_button {
+    /* width: 130px; */
+    width: 65%;
+    height: 12%;
+    margin-top: 30px;
+}
+
+button{
     border: none;
     border-radius: 50px;
-    width: 130px;
+    width: 100%;
+    height: 100%;
     font: 400 13px 'Lexend Deca', sans-serif;;
     background-color: hsl(0, 0%, 95%);
 }
 
-.box_sedans > .box_button  p {
+button:hover {
+    background-color: hsla(0, 0%, 95%, 0.712);
+    transition: 500ms;
+    cursor: pointer;
+    border: 2px solid hsl(0, 0%, 95%);
+}
+
+.box_sedans > .box_button > button {
     color:  hsl(31, 77%, 52%);
 }
 
-.box_suvs > .box_button  p {
+.box_suvs > .box_button > button {
     color:  hsl(184, 100%, 22%);
 }
 
-.box_luxury > .box_button  p {
+.box_luxury > .box_button > button {
     color: hsl(179, 100%, 13%);    
 }
 
 
+@media  (max-width:800px) {
+    .box_container {
+        min-width:initial;
+        max-width: initial;
+        max-height: initial;
+        display: initial;
+        margin-top: 20%;
+        width: 270px;
+        height: 100%;
+    }
 
+    .box_sedans, .box_suvs, .box_luxury {
+        min-width: initial;
+        width: 100%;
+        min-height: initial;
+        height: 380px;
+        box-sizing: border-box;
+        padding: 30px 35px;
+    }
 
+    .box_sedans {
+        border-radius: 7px 7px 0 0;
+    }
+    
+    .box_luxury {
+        border-radius: 0 0 7px 7px;
+    }
+}
 
 
 
